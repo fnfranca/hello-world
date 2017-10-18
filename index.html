@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="C:\Users\y2kj\Documents\libs\angularjs\angular.js"></script>
+<script src=".\teste.js"></script>
+
+<body>
+     
+    <div ng-controller="myCtrl as ctrl">
+        
+        <h3>My header:</h3>
+        
+        <ul>
+            <li ng-repeat="x in ctrl.Alpha.list()">{{x.id}} - {{x.label}}</li>
+        </ul>
+        <button ng-click="ctrl.addName()">Adicionar</button>
+        <button ng-click="ctrl.Alpha.remove()">Remover</button>
+        <button ng-click="ctrl.setLogin()">SetLogin</button>
+    </div>
+
+    <br>
+    <div ng-controller="myCtrl as ctrl">
+        Login: {{ctrl.Alpha.getLogin()}}
+    </div>
+
+    <br>
+    <div>
+      <a href="index2.html">Back</a>
+    </div>
+</body>
+</html>
